@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 wit-bindgen-rt = { version = "0.41.0", features = ["bitflags"] }
+rand = "0.9.0"
 
 [lib]
 crate-type = ["cdylib"]

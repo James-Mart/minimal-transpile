@@ -19,7 +19,8 @@ function App() {
 
   const handleClick = () => {
     if (wasmModule) {
-      wasmModule.hello()
+      const result = wasmModule.hello()
+      console.log(result)
     }
     setCount((count) => count + 1)
   }

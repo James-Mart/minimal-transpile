@@ -1,5 +1,5 @@
 package component:wasm;
 
 world example {
-    export hello: func();
+    export hello: func() -> string;
 }

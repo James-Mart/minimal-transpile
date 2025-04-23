@@ -1,5 +1,12 @@
-# Minimal transpile
+# Instructions
 
-Intended to be a minimal test to see if calling basic transpiled functions is working.
+After opening in a dev container, run:
 
-Run `yarn && yarn build && yarn dev`
+`yarn && yarn build && yarn dev`
+
+# Minimal transpile example
+
+This is a minimal example of a default react/typescript app that calls a simple function from a transpiled wasm component.
+
+Intended to demonstrate an issue on some machines with calling transpiled wasms in browser.
+

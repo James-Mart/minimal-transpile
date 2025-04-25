@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 # Install Rust using rustup (as non-root user)
 USER node
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.84.1
 ENV PATH="/home/node/.cargo/bin:${PATH}"
 
 # Install wasm32-wasip1 target

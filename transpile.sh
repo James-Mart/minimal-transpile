@@ -6,7 +6,11 @@ if [ -d "./wasm" ]; then
 fi
 
 echo "Creating wasm project..."
-./create-wasm-proj.sh
+cargo component new --lib --name wasm ./wasm
+
+# Replace the hello world function with a println to exercise a wasi shim
+sed -i 's/"Hello, World!".to_string()/println!("hello world"); "hello world".to_string()/' ./wasm/src/lib.rs
+
 
 echo "Building wasm component..."
 cd wasm

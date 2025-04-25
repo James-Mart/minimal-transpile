@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 interface WasmModule {
-  hello: () => void
+  helloWorld: () => void
 }
 
 function App() {
@@ -19,8 +19,7 @@ function App() {
 
   const handleClick = () => {
     if (wasmModule) {
-      const result = wasmModule.hello()
-      console.log(result)
+      wasmModule.helloWorld()
     }
     setCount((count) => count + 1)
   }

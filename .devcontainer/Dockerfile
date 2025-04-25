@@ -17,7 +17,7 @@ ENV PATH="/home/node/.cargo/bin:${PATH}"
 RUN rustup target add wasm32-wasip1
 
 # Install cargo-component
-RUN cargo install cargo-component
+RUN cargo install cargo-component@0.21.0 --locked
 
 # Switch back to root for compatibility with dev container
 USER root 
